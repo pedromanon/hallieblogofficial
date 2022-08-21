@@ -1,0 +1,25 @@
+<div *ngIf="!currentPost">
+  <div class="post" *ngFor="let item of posts.reverse(); let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setActivePost(item, i)">
+    <h2>{{ item.title }}</h2>
+    <div class="body">
+        {{ item.body }}
+    </div>
+    <p class="byline">
+        <span class="date">{{ item.date }}</span>
+    </p>
+  </div>
+</div>
+
+
+<button class="add-post" (click)="this.ToAddPostPage()" title="Add a post">+</button>
+
+<div class="col-md-6">
+  <div *ngIf="currentPost">
+    <app-post-details
+      (refreshList)="refreshList()"
+      [post]="currentPost"
+    ></app-post-details>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="post" *ngFor="let item of posts.reverse()">
+    <h2>{{ item.title }}</h2>
+    <div class="body">
+        {{ item.body }}
+    </div>
+    <p class="byline">
+        <span class="date">{{ item.date }}</span>
+    </p>
+</div>

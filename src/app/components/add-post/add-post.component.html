@@ -1,0 +1,27 @@
+<div class="submit-form">
+  <button (click)="ToAdminLanding()" class="back">Back</button>
+  <div *ngIf="!submitted">
+    <h3>Title</h3>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="post.title"
+        name="title"
+        placeholder="Title"
+      />
+    </div>
+    <h3>Body</h3>
+    <div class="form-group input-group">
+      <textarea class="form-control" type="submit" required
+      [(ngModel)]="post.body" aria-label="With textarea" placeholder="Blog post"></textarea>
+    </div>
+    <button (click)="savePost()" class="submit">Submit</button>
+  </div>
+  <div *ngIf="submitted">
+    <h1>You submitted successfully!</h1>
+    <button class="btn btn-success" (click)="newPost()">Add Another Post</button>
+  </div>
+</div>

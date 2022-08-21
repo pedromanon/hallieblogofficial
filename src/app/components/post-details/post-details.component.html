@@ -1,0 +1,24 @@
+<div class="submit-form">
+  <button (click)="ToAdminLanding()" class="back">Back</button>
+  <div *ngIf="currentPost">
+    <h3>Title</h3>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="currentPost.title"
+        name="title"
+        placeholder="Title"
+      />
+    </div>
+    <h3>Body</h3>
+    <div class="form-group input-group">
+      <textarea class="form-control" required
+      [(ngModel)]="currentPost.body" aria-label="With textarea" placeholder="Blog post"></textarea>
+    </div>
+    <button class="badge badge-danger mr-2" (click)="deletePost()">Delete</button>
+    <button type="submit" class="badge badge-success" (click)="updatePost()">Update</button>
+  </div>
+</div>
