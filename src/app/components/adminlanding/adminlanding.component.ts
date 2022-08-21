@@ -15,9 +15,11 @@ export class AdminlandingComponent implements OnInit {
   currentPost = null;
   currentIndex = -1;
   title = '';
-  constructor(private postService: DatabaseService, public router: Router) { }
-  ngOnInit(): void {
+  constructor(private postService: DatabaseService, public router: Router) { 
     this.retrievePosts();
+  }
+  ngOnInit(): void {
+    // this.retrievePosts();
   }
   refreshList(): void {
     this.currentPost = null;

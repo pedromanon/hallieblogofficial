@@ -17,11 +17,11 @@ export class LandingComponent implements OnInit {
   posts: any;
 
   constructor(private postService: DatabaseService) {
-
+      this.retrievePosts();
     }
   
   ngOnInit(): void {
-    this.retrievePosts();
+    // this.retrievePosts();
   }
 
   retrievePosts(): void {
