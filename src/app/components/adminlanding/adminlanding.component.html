@@ -1,5 +1,5 @@
 <div *ngIf="!currentPost">
-  <div class="post" *ngFor="let item of posts.reverse(); let i = index"
+  <div class="post" *ngFor="let item of posts.slice().reverse(); let i = index"
                 [class.active]="i == currentIndex"
                 (click)="setActivePost(item, i)">
     <h2>{{ item.title }}</h2>

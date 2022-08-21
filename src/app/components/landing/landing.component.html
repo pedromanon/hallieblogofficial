@@ -1,4 +1,4 @@
-<div class="post" *ngFor="let item of posts.reverse()">
+<div class="post" *ngFor="let item of posts.slice().reverse()">
     <h2>{{ item.title }}</h2>
     <div class="body">
         {{ item.body }}
