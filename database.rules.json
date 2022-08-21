@@ -1,0 +1,8 @@
+{
+  "rules": {
+    ".read": true,
+  	"Post" : {
+  		".write" : "auth.uid != null"
+  	}
+	}
+}
